@@ -1,10 +1,11 @@
 import PropTypes from 'prop-types';
+import Container from 'react-bootstrap/Container';
 import ToastContainer from 'react-bootstrap/ToastContainer';
 import Toast from 'react-bootstrap/Toast';
 
 const AppNotification = ({ content, show, setShow }) => {
 	return (
-		<div>
+		<Container>
 			<ToastContainer position='bottom-end'>
 				<Toast
 					delay={3000}
@@ -17,7 +18,7 @@ const AppNotification = ({ content, show, setShow }) => {
 					</Toast.Body>
 				</Toast>
 			</ToastContainer>
-		</div >
+		</Container>
 	);
 };
 

@@ -18,21 +18,19 @@ const PhraseInput = ({ setPhrase, setDict }) => {
 
 	return (
 		<Form onSubmit={handleSubmit}>
-			<Row>
-				<Col>
-					<FloatingLabel
-						label='Write your phrase here'
-					>
+			<Row className='d-flex align-items-center'>
+				<Col sm={8}>
+					<FloatingLabel label='Write your phrase here'>
 						<Form.Control
 							type='text'
 							placeholder='phrase'
 							ref={phraseRef} />
 					</FloatingLabel>
 				</Col>
-				<Col>
+				<Col sm={4}>
 					<Form.Group as={Row}>
-						<Form.Label htmlFor='dict' column sm='2'>Dictionary:</Form.Label>
-						<Col sm='10'>
+						<Form.Label htmlFor='dict' column sm={4}>Dictionary:</Form.Label>
+						<Col sm={8}>
 							<Form.Select id='dict' ref={dictRef}>
 								<option value="simple">Simple</option>
 								<option value="chaka">Chaka</option>
@@ -41,8 +39,8 @@ const PhraseInput = ({ setPhrase, setDict }) => {
 					</Form.Group>
 				</Col>
 			</Row>
-			<Row>
-				<Button type='submit'>Transform it!</Button>
+			<Row className='w-50 mt-5 mx-auto'>
+				<Button size='lg' type='submit'>Transform it!</Button>
 			</Row>
 		</Form>
 	);

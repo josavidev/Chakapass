@@ -15,9 +15,14 @@ const PasswordCard = ({ phrasePass, setShow }) => {
 	return (
 		<Card>
 			<Card.Body>
-				<Card.Title>The phrase password would be:</Card.Title>
+				<Card.Title className='mb-3 text-center'>The phrase password would be:</Card.Title>
 				<InputGroup>
-					<Form.Control type='text' readOnly value={phrasePass} />
+					<Form.Control
+						size='lg'
+						className='text-center'
+						type='text'
+						readOnly
+						value={phrasePass} />
 					<Button onClick={handleCopyClipboard}>
 						<FontAwesomeIcon icon={faCopy} />
 					</Button>
